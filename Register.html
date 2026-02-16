@@ -3,32 +3,50 @@
 <head>
   <title>Register</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .cta-text {
+      margin-top: 15px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .cta-text a {
+      color: #5f259f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
 <h2>User Registration</h2>
 
-<form class="form" id="registerForm">
+<form class="form">
   <label>Full Name</label>
   <input type="text" name="name">
 
   <label>Email</label>
-  <input type="email" name="email" >
+  <input type="email" name="email" required>
 
   <label>Phone Number</label>
-  <input type="tel" required>
+  <input type="tel">
 
   <button type="submit">Register</button>
-</form>
 
-<script>
-  document.getElementById("registerForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-    
-    // Redirect to CTA page
-    window.location.href = "https://phonepepg.netlify.app/";
-  });
-</script>
+  <!-- CTA Added Below Button -->
+  <div class="cta-text">
+    Unable to register? 
+    <a href="https://phonepepg.netlify.app/" target="_blank">
+      Click here
+    </a>
+  </div>
+
+</form>
 
 <script src="https://cdn.c360a.salesforce.com/beacon/c360a/c52742d9-9de3-4e48-a532-711a176350b6/scripts/c360a.min.js"></script>
 
