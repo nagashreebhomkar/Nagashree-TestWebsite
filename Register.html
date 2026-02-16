@@ -8,23 +8,32 @@
 
 <h2>User Registration</h2>
 
-<form class="form">
+<form class="form" id="registerForm">
   <label>Full Name</label>
-  <input type="text" name="name" >
+  <input type="text" name="name">
 
   <label>Email</label>
   <input type="email" name="email" required>
 
-
   <label>Password</label>
-  <input type="password" >
+  <input type="password" required>
 
   <label>Phone Number</label>
-  <input type="tel" >
+  <input type="tel" required>
 
   <button type="submit">Register</button>
 </form>
-  <script src="https://cdn.c360a.salesforce.com/beacon/c360a/c52742d9-9de3-4e48-a532-711a176350b6/scripts/c360a.min.js"></script>
+
+<script>
+  document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    
+    // Redirect to CTA page
+    window.location.href = "https://phonepepg.netlify.app/";
+  });
+</script>
+
+<script src="https://cdn.c360a.salesforce.com/beacon/c360a/c52742d9-9de3-4e48-a532-711a176350b6/scripts/c360a.min.js"></script>
 
 </body>
 </html>
